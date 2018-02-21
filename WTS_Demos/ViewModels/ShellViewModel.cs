@@ -138,8 +138,8 @@ namespace WTS_Demos.ViewModels
             // Edit String/en-US/Resources.resw: Add a menu item title for each page
             PrimaryItems.Add(new ShellNavigationItem("Shell_Main".GetLocalized(), Symbol.Document, "Main"));
             PrimaryItems.Add(new ShellNavigationItem("Shell_Blank".GetLocalized(), Symbol.Document, "Blank"));
-            PrimaryItems.Add(new ShellNavigationItem("Shell_WebView".GetLocalized(), Symbol.Document, "WebView"));
-            PrimaryItems.Add(new ShellNavigationItem("Shell_MediaPlayer".GetLocalized(), Symbol.Document, "MediaPlayer"));
+            PrimaryItems.Add(new ShellNavigationItem("Shell_WebView".GetLocalized(), Symbol.World, "WebView"));
+            PrimaryItems.Add(new ShellNavigationItem("Shell_MediaPlayer".GetLocalized(), Symbol.Video, "MediaPlayer"));
             PrimaryItems.Add(new ShellNavigationItem("Shell_MasterDetail".GetLocalized(), Symbol.Document, "MasterDetail"));
             PrimaryItems.Add(new ShellNavigationItem("Shell_Grid".GetLocalized(), Symbol.Document, "Grid"));
             PrimaryItems.Add(new ShellNavigationItem("Shell_Chart".GetLocalized(), Symbol.Document, "Chart"));
