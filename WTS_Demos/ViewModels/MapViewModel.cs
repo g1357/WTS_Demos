@@ -33,8 +33,8 @@ namespace WTS_Demos.ViewModels
 
         public string MapServiceToken
         {
-            get { return _mapServiceToken; }
-            set { SetProperty(ref _mapServiceToken, value); }
+            get => _mapServiceToken;
+            set =>  SetProperty(ref _mapServiceToken, value); 
         }
 
         private double _zoomLevel;

@@ -42,11 +42,7 @@ namespace WTS_Demos.ViewModels
 
         public bool IsLoading
         {
-            get
-            {
-                 return _isLoading;
-            }
-
+            get =>  _isLoading;
             set
             {
                 if (value)
@@ -63,26 +59,15 @@ namespace WTS_Demos.ViewModels
 
         public Visibility IsLoadingVisibility
         {
-            get
-            {
-                return _isLoadingVisibility;
-            }
-
-            set
-            {
-                SetProperty(ref _isLoadingVisibility, value);
-            }
+            get => _isLoadingVisibility;
+            set => SetProperty(ref _isLoadingVisibility, value);
         }
 
         private bool _isShowingFailedMessage;
 
         public bool IsShowingFailedMessage
         {
-            get
-            {
-                return _isShowingFailedMessage;
-            }
-
+            get => _isShowingFailedMessage;
             set
             {
                 if (value)
@@ -99,26 +84,15 @@ namespace WTS_Demos.ViewModels
 
         public Visibility FailedMesageVisibility
         {
-            get
-            {
-                return _failedMessageVisibility;
-            }
-
-            set
-            {
-                SetProperty(ref _failedMessageVisibility, value);
-            }
+            get => _failedMessageVisibility;
+            set => SetProperty(ref _failedMessageVisibility, value);
         }
 
         private IWebViewService _webViewService;
 
         public IWebViewService WebViewService
         {
-            get
-            {
-                return _webViewService;
-            }
-
+            get => _webViewService;
             // the WebViewService is set from within the view (instead of IoC) because it needs a reference to the control
             set
             {

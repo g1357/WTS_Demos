@@ -17,8 +17,8 @@ namespace WTS_Demos.ViewModels
 
         public string Secret
         {
-            get { return _secret; }
-            set { SetProperty(ref _secret, value); }
+            get => _secret;
+            set => SetProperty(ref _secret, value);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)

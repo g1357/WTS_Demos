@@ -40,16 +40,16 @@ namespace WTS_Demos.ViewModels
 
         public bool IsPaneOpen
         {
-            get { return _isPaneOpen; }
-            set { SetProperty(ref _isPaneOpen, value); }
+            get => _isPaneOpen;
+            set => SetProperty(ref _isPaneOpen, value);
         }
 
         private object _selected;
 
         public object Selected
         {
-            get { return _selected; }
-            set { SetProperty(ref _selected, value); }
+            get => _selected;
+            set => SetProperty(ref _selected, value);
         }
 
         private SplitViewDisplayMode _displayMode = SplitViewDisplayMode.CompactInline;

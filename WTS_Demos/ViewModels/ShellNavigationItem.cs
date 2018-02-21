@@ -66,11 +66,7 @@ namespace WTS_Demos.ViewModels
 
         public bool IsSelected
         {
-            get
-            {
-                return _isSelected;
-            }
-
+            get => _isSelected;
             set
             {
                 SetProperty(ref _isSelected, value);
@@ -91,15 +87,8 @@ namespace WTS_Demos.ViewModels
 
         public SolidColorBrush SelectedForeground
         {
-            get
-            {
-                return _selectedForeground ?? (_selectedForeground = GetStandardTextColorBrush());
-            }
-
-            set
-            {
-                SetProperty(ref _selectedForeground, value);
-            }
+            get => _selectedForeground ?? (_selectedForeground = GetStandardTextColorBrush());
+            set => SetProperty(ref _selectedForeground, value);
         }
 
         public ShellNavigationItem(string name, Symbol symbol, string pageIdentifier)

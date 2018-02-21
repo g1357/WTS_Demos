@@ -19,7 +19,6 @@ namespace WTS_Demos.ViewModels
         public ElementTheme ElementTheme
         {
             get { return _elementTheme; }
-
             set { SetProperty(ref _elementTheme, value); }
         }
 
@@ -28,29 +27,19 @@ namespace WTS_Demos.ViewModels
         public string VersionDescription
         {
             get { return _versionDescription; }
-
             set { SetProperty(ref _versionDescription, value); }
         }
 
         private ICommand _switchThemeCommand;
 
-        public ICommand SwitchThemeCommand
-        {
-            get
-            {
-                if (_switchThemeCommand == null)
+        public ICommand SwitchThemeCommand => _switchThemeCommand ??
+            (_switchThemeCommand = new DelegateCommand<object>(
+                async (param) =>
                 {
-                    _switchThemeCommand = new DelegateCommand<object>(
-                        async (param) =>
-                        {
-                            ElementTheme = (ElementTheme)param;
-                            await ThemeSelectorService.SetThemeAsync((ElementTheme)param);
-                        });
-                }
-
-                return _switchThemeCommand;
-            }
-        }
+                    ElementTheme = (ElementTheme)param;
+                    await ThemeSelectorService.SetThemeAsync((ElementTheme)param);
+                })
+            );
 
         public SettingsViewModel()
         {
